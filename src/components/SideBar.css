@@ -1,0 +1,318 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Component styles */
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  width: 250px; /* Adjust to your desired width */
+  background-color: #333333;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  position: relative;
+ /* transition-duration: 300ms;*/
+  transition: width 0.3s ease-in-out; 
+}
+.sidebar.open {
+    width: 250px; /* Adjust to your desired open width */
+  }
+  
+  .sidebar.closed {
+    width: 50px; /* Adjust to your desired closed width */
+    padding: 2rem;
+    align-items: center;
+
+  }
+
+.sidebar__app-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sidebar__app-title {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition-duration: 300ms;
+}
+
+.sidebar__btn-close {
+  cursor: pointer;
+  transition-duration: 300ms;
+  color: white;
+  justify-content: flex-end;
+}
+
+.sidebar__btn-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sidebar__app-logo {
+  cursor: pointer;
+  transition-duration: 300ms;
+  color: white;
+}
+
+/* SideBar Nav */
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__item {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
+
+.nav__item:hover {
+  background-color: #f0f0f0; /* Change to your desired light background color */
+  color: #333333; /* Change to your desired text color */
+}
+
+.nav__icons {
+  cursor: pointer;
+  transition-duration: 300ms;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.nav__msg {
+  display: flex;
+  background-color: #ffcc00;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+}
+
+.nav__p {
+  font-family: "Courier New", monospace;
+}
+
+/* CHATVIEW */
+.chatview {
+    background-color:#374151;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition-duration: 300ms;
+    overflow: hidden;
+    position: relative;
+    background-color: #1f2937;
+    width: 100%;
+}
+  
+  .dark .chatview {
+    background-color: #f3f4f6; /* Replace with your dark mode color */
+  }
+  
+  .chatview__chatarea {
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    transition-duration: 300ms;
+    padding-bottom: 1%;
+  }
+  
+  .form.sm {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+  
+  
+  .chatview__textarea-message {
+    background-color: rgba(0, 0, 0, 0.1); /* Replace with your color */
+    margin-left: 1%;
+    min-height: 4rem; /* Replace with your min height */
+    max-height: 20rem; /* Replace with your max height */
+    padding: 0.5rem;
+    border: 2px solid #6b7280; /* Replace with your border color */
+    overflow-y: hidden;
+    resize: vertical;
+    border-radius: 0.75rem;
+    transition: ease-in-out 300ms;
+    width: 90%;
+    
+  }
+  
+  .dark .chatview__textarea-message {
+    background-color: #f3f4f6; /* Replace with your dark mode background color */
+    border-color: #1f2937; /* Replace with your dark mode border color */
+  }
+  
+  .chatview__btn-send {
+    height: 4rem;
+    width: 4rem;
+    margin-left: 1%;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: ease-in-out 300ms;
+    border: 2px solid #6b7280; /* Replace with your border color */
+    cursor: pointer;
+    color: #000000; /* Replace with your text color */
+    font-weight: 600;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .chatview__btn-send {
+    border-color: #1f2937; /* Replace with your dark mode border color */
+    color: #ffffff; /* Replace with your dark mode text color */
+  }
+  
+  .chatview__btn-send:disabled {
+    opacity: 0.4;
+    transition: ease-in 300ms;
+  }
+  
+  /* ChatMessage */
+  .message {
+    padding-top: 1.25rem;
+    gap: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  
+  .message__wrapper {
+    flex-grow: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  .message__markdown {
+    font-size: 1.5rem; /* Adjust to your font size */
+    color: #374151; /* Replace with your text color */
+  }
+  
+  .dark .message__markdown {
+    color: #ffffff; /* Replace with your dark mode text color */
+  }
+  
+  .message__createdAt {
+    font-size: 0.875rem; /* Adjust to your font size */
+    font-style: italic;
+    color: #9ca3af; /* Replace with your text color */
+  }
+  
+  .dark .message__createdAt {
+    color: #d1d5db; /* Replace with your dark mode text color */
+  }
+  
+  .message__pic {
+    height: 2rem; /* Adjust to your height */
+    width: 2rem; /* Adjust to your width */
+    background-color: #6b7280; /* Replace with your color */
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Adjust to your font size */
+  }
+  
+  .message__thinking {
+    animation: pulse 1s infinite;
+    height: 3rem; /* Adjust to your height */
+    width: 3rem; /* Adjust to your width */
+    color: #000000; /* Replace with your text color */
+    font-size: 1.5rem; /* Adjust to your font size */
+  }
+  
+  .dark .message__thinking {
+    color: #ffffff; /* Replace with your dark mode text color */
+  }
+  
+  /* Signin Page */
+  .signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #333333; /* Replace with your color */
+  }
+  
+  .signin__container {
+    border: 4px solid #6b7280; /* Replace with your border color */
+    border-radius: 2rem;
+    height: 18rem; /* Adjust to your height */
+    width: 18rem; /* Adjust to your width */
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signin__btn {
+    height: 4rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: #d1d5db; /* Replace with your color */
+    transition: ease-in-out 300ms;
+    border: 1px solid #9ca3af; /* Replace with your border color */
+    cursor: pointer;
+    color: #000000; /* Replace with your text color */
+    font-weight: 600;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signin__tos {
+    color: #ffffff; /* Replace with your text color */
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+  
+  /* Scrollbar styles (customize as needed) */
+  /* Webkit Scrollbar */
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* Replace with your color */
+    border-radius: 8px;
+  }
+  
