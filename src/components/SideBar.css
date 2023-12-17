@@ -116,14 +116,14 @@
 
 /* CHATVIEW */
 .chatview {
-    background-color:#374151;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     height: 100vh;
     transition-duration: 300ms;
     overflow: hidden;
     position: relative;
-    background-color: #1f2937;
+   
     width: 100%;
 }
   
@@ -133,12 +133,25 @@
   
   .chatview__chatarea {
     flex-grow: 1;
+    padding-left: 30%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    color: black;
+    
     width: 100%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px rgba(30, 36, 30, 0.1);
   }
+  .chatview_chatarea_text{
+    border-style: ridge;
+    border-width: 2px;
+    width:fit-content; 
+    
+
+  }
+  
   
   .form {
     display:flex;
@@ -169,12 +182,15 @@
     border-radius: 0.75rem;
     transition: ease-in-out 300ms;
     width: 90%;
+    size: 2%;
+    
     
   }
   
   .dark .chatview__textarea-message {
-    background-color: #f3f4f6; /* Replace with your dark mode background color */
-    border-color: #1f2937; /* Replace with your dark mode border color */
+    background-color: #f3f4f6;
+    border-color: #1f2937; 
+    
   }
   
   .chatview__btn-send {

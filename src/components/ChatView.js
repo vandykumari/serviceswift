@@ -14,7 +14,18 @@ const ChatView = () => {
     };
     return(
     <div className='chatview'>
-        <main className='chatview__chatarea'></main>
+        <main className='chatview__chatarea'>
+            <div>
+                <h1 ><span className="chatview_chatarea_text">How can i help you today?</span></h1>
+                <ul>
+                    <li>How to troubleshoot?</li>
+                    <li>How to Restart?</li>
+                    <li>How to troubleshoot?</li>
+                    <li>How to troubleshoot?</li>
+                </ul>
+            </div>
+
+        </main>
        
     <form className='form'>
         <div className='flex items-stretch justify-between w-full'>
