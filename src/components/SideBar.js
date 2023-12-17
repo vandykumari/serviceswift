@@ -61,7 +61,7 @@ const SideBar = () => {
       <div className='nav__bottom'>
         <div className='nav'>
           <a
-            href='https://www.buymeacoffee.com/kevrooz'
+            href=''
             rel='noreferrer'
             target='_blank'
             className='nav__item'>
@@ -75,7 +75,7 @@ const SideBar = () => {
           <a
             rel='noreferrer'
             target='_blank'
-            href='https://github.com/KevinRoozrokh/chatgpt-dalle'
+            href=''
             className='nav__item'>
             <div className='nav__icons'>
               <MdSettings />

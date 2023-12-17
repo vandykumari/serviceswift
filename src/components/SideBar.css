@@ -148,11 +148,7 @@
     border-style: ridge;
     border-width: 2px;
     width:fit-content; 
-    
-
   }
-  
-  
   .form {
     display:flex;
     justify-content: space-between;
