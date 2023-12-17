@@ -17,7 +17,10 @@ const ChatView = () => {
         <main className='chatview__chatarea'>
             <div>
                 <h1 ><span className="chatview_chatarea_text">How can i help you today?</span></h1>
-                <ul>
+                
+            </div>
+            <div  className="chatview_chatarea_text_ul">
+            <ul>
                     <li>How to troubleshoot?</li>
                     <li>How to Restart?</li>
                     <li>How to troubleshoot?</li>

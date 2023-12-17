@@ -83,6 +83,8 @@ const SideBar = () => {
             <h1 style={{display: open ? "block" : "none"}}>Settings</h1>
           </a>
         </div>
+        
+        
         <div className='nav'>
           <a
             rel='noreferrer'
