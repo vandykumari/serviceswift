@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+a{
+  text-decoration:none;
+}
+
 /* Component styles */
 /* Sidebar */
 .sidebar {
@@ -14,8 +18,9 @@
   flex-direction: column;
   gap: 1rem;
   height: 100vh;
+  font-size: 2px;
   width: 250px; /* Adjust to your desired width */
-  background-color: #333333;
+  background-color: #183347;
   padding: 0.5rem;
   padding-top: 1rem;
   position: relative;
@@ -54,6 +59,7 @@
   justify-content: flex-end;
 }
 
+
 .sidebar__btn-icon {
   width: 2rem;
   height: 2rem;
@@ -71,6 +77,7 @@
   justify-content: space-around;
 }
 
+
 .nav__item {
   padding: 1rem 1.5rem;
   display: flex;
@@ -80,12 +87,14 @@
   border-radius: 0.25rem;
   cursor: pointer;
   color: white;
-  font-size: 1rem;
+  font-size: 15px;
+  border:0px ridge  #b4b4b4;
+  box-shadow: 2px 2px  #b4b4b4
+  ;
 }
 
 .nav__item:hover {
-  background-color: #f0f0f0; /* Change to your desired light background color */
-  color: #333333; /* Change to your desired text color */
+  color:#3454e1 ;/* Change to your desired text color */
 }
 
 .nav__icons {
@@ -94,6 +103,8 @@
   color: white;
   font-size: 1.5rem;
 }
+
+
 
 .nav__bottom {
   display: flex;
@@ -123,7 +134,6 @@
     transition-duration: 300ms;
     overflow: hidden;
     position: relative;
-   
     width: 100%;
 }
   
@@ -135,9 +145,8 @@
     flex-grow: 1;
     padding-left: 30%;
     padding-top: 5%;
-    margin-bottom: 1%;
-    color: black;
-    
+    margin-bottom: 0.5%;
+    color:    #404041;
     width: 100%;
     overflow-y: scroll;
     display: flex;
@@ -147,11 +156,14 @@
   .chatview_chatarea_text{
     border-style: ridge;
     border-width: 2px;
+    justify-content: center;
+    box-shadow: 2px 2px  #8815f5;
     width:fit-content; 
   }
   .chatview_chatarea_text_ul{
     padding-top: 8%;
     justify-content: center;
+    padding-left: 10%;
     
   }
   .chatview_chatarea_text_ul ul li {
@@ -181,10 +193,10 @@
   
   
   .chatview__textarea-message {
-    background-color: rgba(0, 0, 0, 0.1); /* Replace with your color */
+    background-color: #b4b4b4; /* Replace with your color */
     margin-left: 1%;
-    min-height: 4rem; /* Replace with your min height */
-    max-height: 20rem; /* Replace with your max height */
+    min-height: 4rem; 
+    max-height: 20rem; 
     padding: 0.5rem;
     border: 2px solid #6b7280; /* Replace with your border color */
     overflow-y: hidden;
@@ -194,38 +206,36 @@
     width: 90%;
     size: 2%;
     font-size: 15pt;
-    
-    
+  }
+  .chatview__textarea-message:focus {
+    outline: none !important;
+    border:2px solid  #8815f5;
+    box-shadow: 0 0 5px #8815f5;
   }
   
-  .dark .chatview__textarea-message {
-    background-color: #f3f4f6;
-    border-color: #1f2937; 
-    
-  }
-  
+
   .chatview__btn-send {
     height: 4rem;
     width: 4rem;
     margin-left: 1%;
     padding: 1rem;
-    border-radius: 50%;
+    border-radius: 70%;
     transition: ease-in-out 300ms;
-    border: 2px solid #6b7280; /* Replace with your border color */
+    border: 2px solid #8815f5; /* Replace with your border color */
     cursor: pointer;
-    color: #000000; /* Replace with your text color */
+    color:  #3454e1; /* Replace with your text color */
     font-weight: 600;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px  #183347;
   }
   
-  .dark .chatview__btn-send {
-    border-color: #1f2937; /* Replace with your dark mode border color */
-    color: #ffffff; /* Replace with your dark mode text color */
-  }
-  
-  .chatview__btn-send:disabled {
+  /*.chatview__btn-send:disabled {
     opacity: 0.4;
     transition: ease-in 300ms;
+  }*/
+  .chatview__btn-send:hover{
+    color:  #183347;
+    transition: ease-in 300ms;
+    ;
   }
   
   /* ChatMessage */
@@ -283,9 +293,6 @@
     font-size: 1.5rem; /* Adjust to your font size */
   }
   
-  .dark .message__thinking {
-    color: #ffffff; /* Replace with your dark mode text color */
-  }
   
   /* Signin Page */
   .signin {

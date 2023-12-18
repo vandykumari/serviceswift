@@ -68,7 +68,7 @@ const SideBar = () => {
             <div className='nav__icons'>
             <MdSupervisedUserCircle/>
             </div>
-            <h1 style={{display: open ? "block" : "none"}}>Profile</h1>
+            <h2 style={{display: open ? "block" : "none"}}>Profile</h2>
           </a>
         </div>
         <div className='nav'>
