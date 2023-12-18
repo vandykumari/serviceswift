@@ -50,6 +50,9 @@ a{
   font-weight: 500;
   font-size: 1.5rem;
   transition-duration: 300ms;
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .sidebar__btn-close {
@@ -75,6 +78,9 @@ a{
 .nav {
   display: flex;
   justify-content: space-around;
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  
 }
 
 
@@ -152,6 +158,9 @@ a{
     display: flex;
     flex-direction: column;
     box-shadow: 1px 4px 4px rgba(30, 36, 30, 0.1);
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .chatview_chatarea_text{
     border-style: ridge;

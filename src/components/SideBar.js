@@ -14,9 +14,19 @@ import {
 import { IconName } from "react-icons/fa";
 import { AiOutlineGithub } from 'react-icons/ai';
 import './SideBar.css';
+import Modal from './Modal';
+import Setting from './Setting';
+
+// Import Link from React Router
+
 
 const SideBar = () => {
     const [open, setOpen] = useState(true);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleSettingsClick = () => {
+      setModalOpen(true);
+    };
     function handleResize() {
         window.innerWidth >= 720 ? setOpen(false) : setOpen(true);
       }
@@ -71,17 +81,16 @@ const SideBar = () => {
             <h2 style={{display: open ? "block" : "none"}}>Profile</h2>
           </a>
         </div>
-        <div className='nav'>
-          <a
-            rel='noreferrer'
-            target='_blank'
-            href=''
+        <div onClick={handleSettingsClick}  className='nav'>
+          <span
+            
             className='nav__item'>
             <div className='nav__icons'>
               <MdSettings />
             </div>
             <h1 style={{display: open ? "block" : "none"}}>Settings</h1>
-          </a>
+            
+          </span>
         </div>
         
         
@@ -98,6 +107,9 @@ const SideBar = () => {
           </a>
         </div>
       </div>
+      <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
+        <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      </Modal>
       
       </section>
       )
